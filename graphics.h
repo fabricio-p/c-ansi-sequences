@@ -42,9 +42,15 @@
 #define ANSISEQ_DYN_SETFG256     ANSISEQ_SETFG256(%d)
 
 #define ANSISEQ_FG_RGB(r, g, b)    ";38;2;"#r";"#g";"#b
-#define ANSISEQ_SETFG_RGB(r, g, b) ANSISEQ_ESC "[" ANSISEQ_FG_RGB(r, g, b) "m"
+#define ANSISEQ_SETFG_RGB(r, g, b)            \
+  ANSISEQ_ESC "[" ANSISEQ_FG_RGB(r, g, b) "m"
 #define ANSISEQ_DYN_FG_RGB         ANSISEQ_FG_RGB(%d, %d, %d)
 #define ANSISEQ_DYN_SETFG_RGB      ANSISEQ_SETFG_RGB(%d, %d, %d)
+
+#define ANSISEQ_FG_DEFAULT ANSISEQ_ESC "[39m" // Set the foreground
+                                              // color to the default one
+                                              // (i.e. reset foreground
+                                              //  colof only)
 
 /* Background colors */
 #define ANSISEQ_BG_BLACK    ";40"
@@ -84,9 +90,15 @@
 #define ANSISEQ_DYN_SETBG256     ANSISEQ_SETBG256(%d)
 
 #define ANSISEQ_BG_RGB(r, g, b)    ";48;2;"#r";"#g";"#b
-#define ANSISEQ_SETBG_RGB(r, g, b) ANSISEQ_ESC "[" ANSISEQ_BG_RGB(r, g, b) "m"
+#define ANSISEQ_SETBG_RGB(r, g, b)            \
+  ANSISEQ_ESC "[" ANSISEQ_BG_RGB(r, g, b) "m"
 #define ANSISEQ_DYN_BG_RGB         ANSISEQ_BG_RGB(%d, %d, %d)
 #define ANSISEQ_DYN_SETBG_RGB      ANSISEQ_SETBG_RGB(%d, %d, %d)
+
+#define ANSISEQ_BG_DEFAULT ANSISEQ_ESC "[49m" // Set the background color
+                                              // to the default one
+                                              // (i.e. reset background
+                                              //  color only)
 
 /* Text styles */
 #define ANSISEQ_TXT_BLD ";1" // bold
@@ -96,7 +108,7 @@
 #define ANSISEQ_TXT_BLK ";5" // blinking mode (idk what it does)
 #define ANSISEQ_TXT_REV ";7" // reversed
 #define ANSISEQ_TXT_HID ";8" // hidden/invisible
-#define ANSISEQ_TXT_TXTK ";9" // strikethrough
+#define ANSISEQ_TXT_STK ";9" // strikethrough
 
 #define ANSISEQ_SETTXT_BLD ANSISEQ_ESC "[" ANSISEQ_TXT_BLD "m"
 #define ANSISEQ_SETTXT_DIM ANSISEQ_ESC "[" ANSISEQ_TXT_DIM "m"
@@ -105,7 +117,7 @@
 #define ANSISEQ_SETTXT_BLK ANSISEQ_ESC "[" ANSISEQ_TXT_BLK "m"
 #define ANSISEQ_SETTXT_REV ANSISEQ_ESC "[" ANSISEQ_TXT_REV "m"
 #define ANSISEQ_SETTXT_HID ANSISEQ_ESC "[" ANSISEQ_TXT_HID "m"
-#define ANSISEQ_SETTXT_TXTK ANSISEQ_ESC "[" ANSISEQ_TXT_TXTK "m"
+#define ANSISEQ_SETTXT_STK ANSISEQ_ESC "[" ANSISEQ_TXT_STK "m"
 
 #define ANSISEQ_GR_RESET   ANSISEQ_ESC "[" "0m"
 
