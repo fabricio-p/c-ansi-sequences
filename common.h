@@ -1,6 +1,6 @@
-#ifndef ANSISEQ_COMMON_H
-#define ANSISEQ_COMMON_H
+#ifndef ANSIQ_COMMON_H
+#define ANSIQ_COMMON_H
 
-#define ANSISEQ_ESC "\x1b"
+#define ANSIQ_ESC "\x1b"
 
-#endif /* ANSISEQ_COMMON_H */
+#endif /* ANSIQ_COMMON_H */
