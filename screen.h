@@ -1,4 +1,4 @@
-#:fndef ANSIQ_SCREEN_H
+#ifndef ANSIQ_SCREEN_H
 #define ANSIQ_SCREEN_H
 #include "common.h"
 
